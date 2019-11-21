@@ -37,19 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webpack_loader',
     'veu',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'seven.urls'
@@ -81,9 +81,9 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'xxxxx',
-        'USER': 'xxxxx',
-        'PASSWORD': 'xxxxxx',
+        'NAME': 'seven',
+        'USER': 'root',
+        'PASSWORD': '1qaz@WSX3edc',
         'HOST': '127.0.0.1',
 }
 }

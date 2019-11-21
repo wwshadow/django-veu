@@ -4,6 +4,7 @@ import os
 import sys
 
 
+sys.path.append("/root/untitled/seven/")
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'seven.settings')
     try:

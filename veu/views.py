@@ -1,10 +1,16 @@
+from django.contrib.postgres import serializers
+from django.core.serializers import json
 from django.http import JsonResponse
 from django.shortcuts import render
 
+import sys
+import os
+
+sys.path.append("/root/untitled/seven/")
 # Create your views here.
 # Create your views here.
 from django.views.decorators.http import require_http_methods
-from seven.veu.models import Book
+from veu.models import Book
 
 @require_http_methods(["GET"])
 def add_book(request):
@@ -25,7 +31,7 @@ def show_books(request):
     response = {}
     try:
         books = Book.objects.filter()
-        response['list']  = json.loads(serializers.serialize("json", books))
+        response['list'] = json.loads(serializers.serialize("json", books))
         response['msg'] = 'success'
         response['error_num'] = 0
     except  Exception as e:

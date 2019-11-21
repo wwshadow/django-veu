@@ -1,10 +1,13 @@
 # -*- coding:utf-8 -*-
 # Author:XXX
 from django.conf.urls import url, include
+from django.urls import path
+import sys
+import os
 
-from seven.veu import views
-
+sys.path.append("/root/untitled/seven/")
+from veu import views
 urlpatterns = [
-    url(r'add_book$', views.add_book, ),
-    url(r'show_books$', views.show_books, ),
+    path(r'add_book$', views.add_book, ),
+    path(r'show_books$', views.show_books, ),
 ]
